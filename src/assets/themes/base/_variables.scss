@@ -1,0 +1,16 @@
+//Colors
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: local("Poppins", sans-serif),
+    url("../../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lora", serif;
+  src: local("Lora", serif),
+    url("../../fonts/Lora-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+//Spacing
+$poppinsFont: "Poppins", sans-serif;
+$loraFont: "Lora", serif;

@@ -1,0 +1,23 @@
+.cbs-navbar {
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
+  padding: 10px 5px;
+
+  .navbar-text {
+    font-family: $poppinsFont;
+    font-size: $font-size-lg;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .cbs-navbar {
+    padding: 8px 16px;
+  }
+}
+.cbs-navbar .navbar-toggler:focus {
+  outline: 0px;
+}
+.cbs-navbar .navbar-toggler {
+  border: 0px !important;
+}

@@ -1,0 +1,35 @@
+.weather-box {
+  border-radius: 12px;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  font-family: $poppinsFont;
+  color: #eaf0fc;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03),
+    0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03),
+    0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05),
+    0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03);
+
+  .temperature-box {
+    font-size: $display2-size;
+    font-weight: 500;
+  }
+  .city-time-box {
+    .city-box {
+      font-size: $h1-font-size;
+      line-height: 1;
+    }
+    .time-box {
+      font-size: $font-size-sm;
+    }
+  }
+  .weather-desc {
+    text-transform: capitalize;
+    font-size: $font-size-sm;
+    color: #4b0317;
+    font-weight: 600;
+  }
+}

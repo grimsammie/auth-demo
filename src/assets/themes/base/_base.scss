@@ -1,0 +1,41 @@
+// html {
+//   // Use this to make it easier to write rem. 16px font size = 1.6Rem
+//   font-size: 62.5%;
+// }
+
+/* typesetting */
+p,
+a,
+li,
+span {
+  font-family: $poppinsFont;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $poppinsFont;
+}
+
+// Main container
+
+.main-container {
+  .inner-within-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @media only screen and (max-width: 992px) {
+    .inner-within-container {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .inner-within-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
