@@ -1,0 +1,98 @@
+// mixed with styled components
+.overlaystyle {
+    display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+
+  &.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  &.ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+    transition: ${({ animatedModal }) =>
+      animatedModal && "opacity 0.5s ease-in-out"};
+  }
+
+  .animatedModal.ReactModal__Content {
+    position: absolute;
+    top: -100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .animatedModal.ReactModal__Content--after-open {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .animatedModal.ReactModal__Content--before-close {
+    top: -100vh;
+    transition: all 0.5s ease-in-out;
+  }
+
+  @media (${Breakpoint.forPhoneOnly}) {
+    .animatedModal.ReactModal__Content {
+      top: auto;
+      bottom: -100vh;
+      transform: translateX(-50%);
+    }
+
+    .animatedModal.ReactModal__Content--after-open {
+      position: absolute;
+      bottom: 2.5vh;
+      transform: translateX(-50%);
+    }
+
+    .animatedModal.ReactModal__Content--before-close {
+      bottom: -100vh;
+    }
+  }
+}
+
+
+.modal {
+  ${width};
+  display: flex;
+  flex-direction: column;
+  border-radius: ${BorderRadius.default};
+  max-width: ${({ modalMaxWidth }) => modalMaxWidth};
+  background-color: white;
+  min-width: 45rem;
+  width: 100%;
+  max-height: ${({ maxHeight }) => maxHeight || "90%"};
+  overflow: ${({ withOverflow }) => (withOverflow ? "visible" : "hidden")};
+  &:focus-visible {
+    outline: transparent none 0rem;
+  }
+  @media (${Breakpoint.forPhoneOnly}) {
+    max-width: 90vw;
+    min-width: auto;
+  }
+}
+
+.modalcontentwrapper {
+  ${height};
+  background-color: white;
+  position: relative;
+  overflow: auto;
+}
