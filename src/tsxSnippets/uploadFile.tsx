@@ -58,7 +58,7 @@ const SupportForm = () => {
   };
 
   return (
-    <StyledFormWrapper>
+    
       <StyledFileUploadSection>
         <StyledFileUploadHeader>
           <StyledFileUploadLabel>
@@ -97,7 +97,6 @@ const SupportForm = () => {
           />
         </StyledFileUploadBtn>
       </StyledFileUploadSection>
-    </StyledFormWrapper>
   );
 };
 
